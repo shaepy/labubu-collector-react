@@ -25,7 +25,8 @@ const ItemPage = () => {
     return (
         <main>
             <h1>{item.variant}</h1>
-            <p>Series: {item.series.name}</p>
+            <img src={item.image_url} />
+            <p>Series: <Link to={`/series/${item.series.id}`}>{item.series.name}</Link></p>
             <p>Franchise: {item.series.franchise.name}</p>
             <p>Released on {item.series.release_date}</p>
         </main>

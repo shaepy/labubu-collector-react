@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 import * as seriesApi from "../../services/seriesService"
 
 const Series = () => {
@@ -19,7 +20,7 @@ const Series = () => {
             <section>
                 <ul>
                     {seriesList.map((series) => (
-                        <li key={series.id}>{series.name}</li>
+                        <li key={series.id}><Link to={`/series/${series.id}`}>{series.name}</Link></li>
                     ))}
                 </ul>
             </section>
